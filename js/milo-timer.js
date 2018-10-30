@@ -8,15 +8,15 @@
  */
 
 // Minutes for Timeout & Countdown
-var timeoutWarningMin = 18; // Minutes until user is warned of pending timeout
-var countdownMin = 2; // Minutes for countdown within modal 
+var timeoutWarningMin = 0.1; // Minutes until user is warned of pending timeout
+var countdownMin = 1; // Minutes for countdown within modal
 
 //Convert minutes into seconds
 var timeoutWarningSec = timeoutWarningMin * 60;
 var countdownSec = countdownMin * 60;
 
 var timeoutModal = document.getElementById("sessionTimeoutModal"); // ID of modal within HTML
-var redirectLocation = '/Default'; // Redirection location
+var redirectLocation = 'success.html'; // Redirection location
 
 // Watch user activity
 function setup() {
@@ -53,7 +53,7 @@ function goInactive() {
         var seconds = 60;
         var mins = minutes;
         function tick() {
-            var counter = document.getElementById("countdownTimerText"); // Timer Text 
+            var counter = document.getElementById("countdownTimerText"); // Timer Text
             var current_minutes = mins - 1;
             seconds--;
             counter.innerHTML = current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds);
@@ -70,7 +70,7 @@ function goInactive() {
     countdown(countdownMin);
 }
 // Restart the session when user chooses to continue their session
-function closeModal() { 
+function closeModal() {
     //Close the modal
     timeoutModal.classList.remove("show");
     timeoutModal.setAttribute("style", "display:none");
