@@ -4,6 +4,8 @@ Milo Timer is fully-customizable JavaScript timeout pop-up that detects user ina
 Milo Timer keeps an eye out for user inactivity and uses a Bootstrap modal to kindly ask them if they'd like to continue working or logout. Great way to keep users from walking away from incomplete forms or systems requiring active saving or sensitive information.  
 
 The modal prompts users to confirm they'd like to contiue and features a customizable countdown timer to indicate time remaining. When time runs out, users can be redirected to any page, using '.replace(),' disabling use of the Back button.  A benefit of using a modal to prompt the user, opposed to an `aler()` or `confirm()` is the redirection.  Once the countdown timer reaches zero, the user will be redirected without having to confirm or clear the alert. 
+## Demo
+See the timer in action.  [View the Demo](https://jlschillinger.github.io/Milo-Timer/example.html)
 
 ## What do you need? 
 The timer itself requires plain old JavaScript and can be easily used without Bootstrap or JQuery.  As is, basic [Bootstrap installation](https://getbootstrap.com/) is necessary for the modal. 
